@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Flipbook | Muestra</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <!-- Milligram CSS minified -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+    <!-- Master css -->
+    <link rel="stylesheet" href="css/master.css">
+    <!-- Booklet css -->
+    <link rel="stylesheet" href="css/jquery.booklet.latest.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script> window.jQuery || document.write('<script src="booklet/jquery-2.1.0.min.js"><\/script>') </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.booklet.latest.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h5>Catálogo de muestra</h5>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column"></div>
+            <div class="column">
+                <div id="mybook">
+                    <div class="cover">
+                        <div class="row">
+                            <div class="column">
+                                <img src="https://martech.zone/wp-content/uploads/2010/06/example-logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column"></div>
+                            <div class="column center-text">
+                                <h5>Catálogo muestra</h5>
+                                <p>2017</p>
+                            </div>
+                            <div class="column"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div class="column">
+                                <h3>Lorem ipsum</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column" style="background-color:#DF0101; height:174px;padding-top:-100px;">
+                                <img src="http://content.wisestep.com/wp-content/uploads/2015/03/american-eagle-model-workout.jpg" alt="">
+                                <hr>
+                                <p style="font-size:10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eteccaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3></h3>
+                    </div>
+                    <div>
+                        <h3></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    $(function() {
+        //single book
+        $('#mybook').booklet();
+
+        //Closed book
+        // $("#mybook").booklet({ closed: true });
+
+        // width
+        $("#mybook").booklet({ width: 900 });
+
+        // height
+        $("#mybook").booklet({ height: 600 });
+
+        // Numbers
+        $("#mybook").booklet({ pageNumbers: false });
+
+        //multiple books with ID's
+        $('#mybook1, #mybook2').booklet();
+
+        //multiple books with a class
+        $('.mycustombooks').booklet();
+    });
+    </script>
+
+</body>
+</html>
